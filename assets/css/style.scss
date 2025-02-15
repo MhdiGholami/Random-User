@@ -1,0 +1,139 @@
+// Fonts
+@font-face {
+    font-family: 'BarlowSemi';
+    src: url(../fonts/BarlowSemiCondensed-Regular.ttf);
+}
+
+// css variables
+:root {
+    --theme-dark: rgba(43, 48, 53);
+    --theme-light: rgba(246, 247, 248);
+    --text-dark: rgb(26, 26, 26);
+    --text-light: rgb(246, 246, 246);
+    --border-gray: rgb(60, 60, 60);
+    --bg-gray: rgb(33, 37, 41);
+}
+
+
+// main css styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'BarlowSemi';
+    background-color: var(--theme-light);
+    transition: .5s;
+}
+
+main {
+    width: 100%;
+}
+
+.theme-parent {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 40px;
+    cursor: pointer;
+}
+
+.theme {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.theme:hover {
+    background-color: rgb(225, 225, 225);
+    transition: .3s ease-in-out;
+}
+
+.darkmode {
+    background-color: var(--theme-dark);
+}
+
+.lightmode {
+    background-color: var(--theme-light);
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.text-light {
+    color: var(--text-light) !important;
+}
+
+#card-parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 150px;
+}
+
+.card {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.7);
+    border: var(--border-gray);
+}
+
+.card-dark {
+    background-color: var(--bg-gray);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+    transition: .2s ease-in-out;
+}
+
+.profile-image {
+    width: 30%;
+
+    >img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.profile-details {
+    width: 65%;
+}
+
+.name,
+.age,
+.email,
+.about {
+    color: var(--text-dark);
+}
+
+.age,
+.email {
+    padding: 5px 0;
+}
+
+.loadmore-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadmore {
+    padding: 15px 40px;
+    font-size: 24px;
+    cursor: pointer;
+}
